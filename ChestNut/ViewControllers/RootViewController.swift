@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 class RootViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class RootViewController: UIViewController {
     private let segueListPhotoImg = "segueListPhotoImg"
     var fastPhotoImgController: FastImgPhotoViewController!
     var listPhotoImgController: ListImgPhotoViewController!
+    var lastScorllIndex: CGFloat?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifior = segue.identifier else { return }
@@ -38,21 +40,19 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 }
 
 extension RootViewController: ListImgControllerProtocol {
-    func listScroll(sc: UIScrollView, ve: CGPoint){
-        if (ve.y > 0 && self.fastPhotoImgTop.constant >= -205) {
-            UIView.animate(withDuration: 0.36, animations: {
-                self.fastPhotoImgTop.constant = -205
-            })
-        } else if (ve.y < 0 && self.fastPhotoImgTop.constant <= 0) {
-            UIView.animate(withDuration: 0.36, animations: {
+    func listScroll(sc: UIScrollView) {
+        if let scorllIndex = self.lastScorllIndex {
+            if (sc.contentOffset.y > scorllIndex && self.fastPhotoImgTop.constant >= -205) {// 上滑动
+               self.fastPhotoImgTop.constant = -205
+            } else if (sc.contentOffset.y < scorllIndex && self.fastPhotoImgTop.constant <= 0){// 下滑动
                 self.fastPhotoImgTop.constant = 0
-            })
+            }
         }
+        self.lastScorllIndex = sc.contentOffset.y
     }
 }
 

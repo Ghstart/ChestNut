@@ -8,5 +8,6 @@ target 'ChestNut' do
   inhibit_all_warnings!
 
   # Pods for ChestNut
+  pod 'LeanCloud'
 
  end

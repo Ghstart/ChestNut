@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ListImgControllerProtocol: class {
-    func listScroll(sc: UIScrollView, ve: CGPoint)
+    func listScroll(sc: UIScrollView)
 }
 
 class ListImgPhotoViewController: UIViewController {
@@ -25,8 +25,9 @@ class ListImgPhotoViewController: UIViewController {
     }
 
     func setUpTableView() {
-        listImgTableView.delegate = self
+        listImgTableView.delegate   = self
         listImgTableView.dataSource = self
+        listImgTableView.bounces    = false
         listImgTableView.estimatedRowHeight = 120
         listImgTableView.tableFooterView = UIView()
     }
@@ -53,7 +54,7 @@ extension ListImgPhotoViewController: UITableViewDelegate, UITableViewDataSource
 }
 
 extension ListImgPhotoViewController: UIScrollViewDelegate {
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        self.delegate?.listScroll(sc: scrollView, ve: velocity)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.delegate?.listScroll(sc: scrollView)
     }
 }
