@@ -12,8 +12,10 @@ import LeanCloud
 class RootViewController: UIViewController {
     
     @IBOutlet weak var fastPhotoImgTop: NSLayoutConstraint!
+    
     private let segueFastPhotoImg = "segueFastPhotoImg"
     private let segueListPhotoImg = "segueListPhotoImg"
+    
     var fastPhotoImgController: FastImgPhotoViewController!
     var listPhotoImgController: ListImgPhotoViewController!
     var lastScorllIndex: CGFloat?
@@ -40,6 +42,7 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 }
 
@@ -55,4 +58,5 @@ extension RootViewController: ListImgControllerProtocol {
         self.lastScorllIndex = sc.contentOffset.y
     }
 }
+
 
