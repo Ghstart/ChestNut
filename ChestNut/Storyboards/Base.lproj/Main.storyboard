@@ -282,24 +282,6 @@
             </objects>
             <point key="canvasLocation" x="121" y="280"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="LRw-sv-CqE">
-            <objects>
-                <viewController id="Zgo-gM-0ha" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JzH-e9-Nqh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Yw3-bp-Yh6"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="PNp-6U-o1A">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="WY4-he-7qv"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MGQ-08-8Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1620" y="74"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZkO-Or-cjj">
             <objects>
@@ -311,18 +293,109 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Zgo-gM-0ha" kind="relationship" relationship="rootViewController" id="jcJ-TK-zxL"/>
+                        <segue destination="rK9-Lz-Ptn" kind="relationship" relationship="rootViewController" id="tw2-pS-X1Z"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="864-cG-2vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953" y="74"/>
         </scene>
+        <!--Publish Contents View Controller-->
+        <scene sceneID="ZlK-B5-MKU">
+            <objects>
+                <viewController id="rK9-Lz-Ptn" customClass="PublishContentsViewController" customModule="ChestNut" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yBu-Pq-QZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxy-Or-qx4">
+                                <rect key="frame" x="0.0" y="489" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Do-QM-34d">
+                                        <rect key="frame" x="10" y="11" width="35" height="29"/>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="chooseImgBtnPressed:" destination="rK9-Lz-Ptn" eventType="touchUpInside" id="S9x-LZ-Iwg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN9-SF-H09">
+                                        <rect key="frame" x="345" y="14" width="20" height="22"/>
+                                        <state key="normal" image="Down"/>
+                                        <connections>
+                                            <action selector="dissKeyBoardBtnPressed:" destination="rK9-Lz-Ptn" eventType="touchUpInside" id="SpS-vH-c2j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EBa-28-tAl"/>
+                                    <constraint firstAttribute="trailing" secondItem="mN9-SF-H09" secondAttribute="trailing" constant="10" id="b41-MQ-nns"/>
+                                    <constraint firstItem="9Do-QM-34d" firstAttribute="centerY" secondItem="Nxy-Or-qx4" secondAttribute="centerY" id="egh-Uf-gva"/>
+                                    <constraint firstItem="mN9-SF-H09" firstAttribute="centerY" secondItem="Nxy-Or-qx4" secondAttribute="centerY" id="vI3-f7-kQz"/>
+                                    <constraint firstItem="9Do-QM-34d" firstAttribute="leading" secondItem="Nxy-Or-qx4" secondAttribute="leading" constant="10" id="zrd-gJ-dJt"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NAo-wX-FQT">
+                                <rect key="frame" x="10" y="88" width="375" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="AHs-V9-8xf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nxy-Or-qx4" firstAttribute="trailing" secondItem="5yL-yy-apA" secondAttribute="trailing" id="1HZ-yc-JFY"/>
+                            <constraint firstItem="Nxy-Or-qx4" firstAttribute="leading" secondItem="5yL-yy-apA" secondAttribute="leading" id="Eay-Kk-Kab"/>
+                            <constraint firstItem="NAo-wX-FQT" firstAttribute="trailing" secondItem="5yL-yy-apA" secondAttribute="trailing" constant="10" id="Nic-8a-2mP"/>
+                            <constraint firstItem="NAo-wX-FQT" firstAttribute="top" secondItem="5yL-yy-apA" secondAttribute="top" id="mKV-oY-WE4"/>
+                            <constraint firstItem="NAo-wX-FQT" firstAttribute="leading" secondItem="5yL-yy-apA" secondAttribute="leading" constant="10" id="nmw-mJ-8Ia"/>
+                            <constraint firstAttribute="bottom" secondItem="Nxy-Or-qx4" secondAttribute="bottom" id="ueT-PI-7yc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5yL-yy-apA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4vu-AM-Od8">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="6rQ-vu-K3M">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aEs-L5-9e2">
+                                <rect key="frame" x="16" y="11" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chevron-left"/>
+                                <connections>
+                                    <action selector="backToRootActionPressed:" destination="rK9-Lz-Ptn" eventType="touchUpInside" id="pz9-IJ-Wn5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="LbY-YZ-Wnr">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iyb-Qc-bbb">
+                                <rect key="frame" x="339" y="11" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="publish"/>
+                                <connections>
+                                    <action selector="publishActionPressed:" destination="rK9-Lz-Ptn" eventType="touchUpInside" id="5Zy-eZ-qqK"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="ueT-PI-7yc" id="sm0-jb-Hvh"/>
+                        <outlet property="fastBtnBG" destination="Nxy-Or-qx4" id="kMd-nv-GxT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADD-2X-hMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-168"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Down" width="20" height="11"/>
         <image name="alert-circle" width="14" height="14"/>
+        <image name="camera" width="35" height="29"/>
+        <image name="chevron-left" width="20" height="20"/>
         <image name="food" width="313" height="160"/>
         <image name="map-pin" width="14" height="14"/>
         <image name="more" width="13" height="3"/>
+        <image name="publish" width="20" height="20"/>
     </resources>
 </document>

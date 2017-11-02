@@ -16,6 +16,7 @@
 		C046F55C1F8C702C0048685D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C046F55A1F8C702C0048685D /* LaunchScreen.storyboard */; };
 		C046F5671F8C702C0048685D /* ChestNutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C046F5661F8C702C0048685D /* ChestNutTests.swift */; };
 		C046F5721F8C702C0048685D /* ChestNutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C046F5711F8C702C0048685D /* ChestNutUITests.swift */; };
+		C0D7B9661FA996F9006577F5 /* PublishContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7B9651FA996F9006577F5 /* PublishContentsViewController.swift */; };
 		C0F413841F999EC000A7BE07 /* FastImgPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F413831F999EC000A7BE07 /* FastImgPhotoCell.swift */; };
 		C0F413861F999F0500A7BE07 /* FastImgPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F413851F999F0500A7BE07 /* FastImgPhotoViewController.swift */; };
 		C0F413881F99A9E100A7BE07 /* ListImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F413871F99A9E100A7BE07 /* ListImgCell.swift */; };
@@ -59,6 +60,7 @@
 		C046F56D1F8C702C0048685D /* ChestNutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChestNutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C046F5711F8C702C0048685D /* ChestNutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestNutUITests.swift; sourceTree = "<group>"; };
 		C046F5731F8C702C0048685D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0D7B9651FA996F9006577F5 /* PublishContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishContentsViewController.swift; sourceTree = "<group>"; };
 		C0F413831F999EC000A7BE07 /* FastImgPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastImgPhotoCell.swift; sourceTree = "<group>"; };
 		C0F413851F999F0500A7BE07 /* FastImgPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastImgPhotoViewController.swift; sourceTree = "<group>"; };
 		C0F413871F99A9E100A7BE07 /* ListImgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListImgCell.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		C046F5501F8C702C0048685D /* ChestNut */ = {
 			isa = PBXGroup;
 			children = (
+				C0D7B9641FA996D9006577F5 /* Location */,
 				C005B4821F999D8D00ED5FE3 /* Views */,
 				C046F5851F8C73D20048685D /* ViewControllers */,
 				C046F5841F8C73B20048685D /* SupportingFiles */,
@@ -200,9 +203,17 @@
 				C046F5531F8C702C0048685D /* RootViewController.swift */,
 				C0F413851F999F0500A7BE07 /* FastImgPhotoViewController.swift */,
 				C0F413891F99AA2900A7BE07 /* ListImgPhotoViewController.swift */,
-				C026E5F31FA8AD6200094E42 /* LocationServives.swift */,
+				C0D7B9651FA996F9006577F5 /* PublishContentsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0D7B9641FA996D9006577F5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				C026E5F31FA8AD6200094E42 /* LocationServives.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		C0F413821F999E9200A7BE07 /* Cells */ = {
@@ -419,6 +430,7 @@
 			files = (
 				C0F4138A1F99AA2900A7BE07 /* ListImgPhotoViewController.swift in Sources */,
 				C046F5541F8C702C0048685D /* RootViewController.swift in Sources */,
+				C0D7B9661FA996F9006577F5 /* PublishContentsViewController.swift in Sources */,
 				C046F5521F8C702C0048685D /* AppDelegate.swift in Sources */,
 				C0F413861F999F0500A7BE07 /* FastImgPhotoViewController.swift in Sources */,
 				C026E5F41FA8AD6200094E42 /* LocationServives.swift in Sources */,
